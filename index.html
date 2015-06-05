@@ -4,13 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>StudyUpApp</title>
-	<script src="http://fb.me/react-0.8.0.js"></script>
-	<script src="http://fb.me/JSXTransformer-0.8.0.js"></script>
+	<script src="http://fb.me/react-0.13.0.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
 </head>
 <body>
 	<div id="content"></div>
 	<script type="text/jsx">
-	/*** @jsx React.DOM */
 
 	// Dummy Data
 	var data = [
@@ -61,7 +60,7 @@
 		}
 	});
 
-	React.renderComponent(<StudyUpApp data={data} />, document.getElementById('content'))
+	React.render(<StudyUpApp data={data} />, document.getElementById('content'))
 	</script>
 </body>
 </html>
