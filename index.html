@@ -13,17 +13,22 @@
 
 	// Dummy Data
 	var data = [
-		{question:'Who is this?', answer:'Panda'},
-		{question:'Why are you here?', answer:'To make that green'},
-		{question:'What are you gonna do?', answer:'Keep coding!'}
-	]
+		{ id: 1, question:'Who is this?', answer:'Panda'},
+		{ id: 2, question:'Why are you here?', answer:'To make that green'},
+		{ id: 3, question:'What are you gonna do?', answer:'Keep coding!'}
+	];
 
 	var StudyUpApp = React.createClass({
+		incrementId: function() {
+			this.setState({
+				id: this.state.id + 1
+			});
+		},
 		getInitialState: function() {
-        	return { showResults: false };
+        	return { showResults: false, id: 1 };
     	},
     	onClick: function() {
-        	this.setState({ showResults: true });
+        	this.setState({ showResults: true});
     	},
 		render:function(){
 			return (
@@ -40,6 +45,7 @@
 		render:function(){
 			return (
 					<div>
+						<div>{this.props.id}</div>
 						<h3>{this.props.question}</h3>
 						<p>{this.props.answer}</p>
 					</div>
@@ -50,7 +56,7 @@
 	var StudyList = React.createClass({
 		render:function(){
 					var interview = this.props.data.map(function(round){
-						return <Card question={round.question} answer={round.answer} />
+						return <Card id={round.id} question={round.question} answer={round.answer} />
 					});
 					return (
 							<div>
