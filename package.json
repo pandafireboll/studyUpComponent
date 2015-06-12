@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pandafireboll/studyUpComponent/issues"
   },
-  "homepage": "https://github.com/pandafireboll/studyUpComponent#readme"
+  "homepage": "https://github.com/pandafireboll/studyUpComponent#readme",
+  "devDependencies": {
+    "react-tools": "^0.13.3"
+  }
 }
