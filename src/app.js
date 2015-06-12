@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StudyUpApp</title>
-	<script src="http://fb.me/react-0.13.0.js"></script>
-	<script src="http://fb.me/JSXTransformer-0.13.0.js"></script>
-</head>
-<body>
-	<div id="content"></div>
-	<script type="text/jsx">
-
-	// Dummy Data
+// Dummy Data
 	var data = [
 		{ id: 1, question:'Who is this?', answer:'Panda'},
 		{ id: 2, question:'Why are you here?', answer:'To make that green'},
@@ -67,6 +54,3 @@
 	});
 
 	React.render(<StudyUpApp data={data} />, document.getElementById('content'))
-	</script>
-</body>
-</html>

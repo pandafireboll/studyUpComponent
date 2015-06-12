@@ -1,0 +1,20 @@
+{
+  "name": "studyupcomp",
+  "version": "0.0.1",
+  "description": "StudyUp Main Component 0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "jsx --watch src/ build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandafireboll/studyUpComponent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandafireboll/studyUpComponent/issues"
+  },
+  "homepage": "https://github.com/pandafireboll/studyUpComponent#readme"
+}
