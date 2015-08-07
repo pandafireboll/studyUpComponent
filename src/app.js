@@ -1,3 +1,6 @@
+// Speedtest start
+var start  = +new Date();
+
 	// Data Set
 	var data = [
 		{ id: 1, question:'Who is this?', answer:'Panda'},
@@ -12,12 +15,15 @@
 				id: this.state.id + 1
 			});
 		},
+		//initial state
 		getInitialState: function() {
         	return { showResults: false, id: 1 };
     	},
+    	//click event
     	handleClick: function() {
         	this.setState({ showResults: !this.state.showResults });
     	},
+    	//render return
 		render:function(){
 			return (
 					<div>
@@ -25,7 +31,7 @@
 						<Button localOnClick={this.handleClick} />
                 		{ this.state.showResults ? <StudyList data={this.props.data} /> : null }
 					</div>
-				)
+			)
 		}
 	});
 
@@ -35,7 +41,7 @@
 		render:function(){
 			return (
 					<button onClick={this.props.localOnClick}>Toggle</button>
-				)
+			)
 		}
 	});
 
@@ -48,7 +54,7 @@
 						<h3>{this.props.question}</h3>
 						<p>{this.props.answer}</p>
 					</div>
-				)
+			)
 		}
 	});
 
@@ -64,8 +70,13 @@
 							<div>
 								{interview}
 							</div>
-						)
+					)
 		}
 	});
 
+	// renders out main component
 	React.render(<StudyUpApp data={data} />, document.getElementById('content'))
+
+//Speedtest end
+var end = +new Date();
+console.log(end - start + " ms");
